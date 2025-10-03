@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World omer");
+  res.send("Hello World omer mogno db");
 });
 
 app.get("/test", (req: Request, res: Response) => {
