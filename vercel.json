@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "functions": {
-    "server.ts": {
-      "runtime": "@vercel/node@3"
+  "builds": [
+    {
+      "src": "server.ts",
+      "use": "@vercel/node@3.0.0"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/(.*)",
