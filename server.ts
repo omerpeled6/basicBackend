@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import counterRoutes from "./routes/counterRoutes.js";
+import counterRoutes from "./routes/counterRoutes";
 import cors from "cors";
 
 const MONGOURI =
