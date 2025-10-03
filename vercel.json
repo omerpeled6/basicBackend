@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/api/index" },
+    { "source": "/test", "destination": "/api/index" },
+    { "source": "/counter", "destination": "/api/index" },
+    { "source": "/counter/update", "destination": "/api/index" }
+  ]
+}
