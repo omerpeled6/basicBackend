@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import mongoose from "mongoose";
-import counterRoutes from "./routes/counterRoutes";
+// import counterRoutes from "./routes/counterRoutes";
 import cors from "cors";
 
 const MONGOURI =
@@ -14,12 +14,8 @@ app.get("/", (req: Request, res: Response) => {
   res.send("Hello World omer mogno db");
 });
 
-app.get("/test", (req: Request, res: Response) => {
-  res.json({ message: "Hello World3" });
-});
-
 // Register counter routes
-app.use("/counter", counterRoutes);
+// app.use("/counter", counterRoutes);
 
 // Connect to MongoDB
 mongoose
