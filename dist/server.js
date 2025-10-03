@@ -1,6 +1,5 @@
 import express from "express";
 import mongoose from "mongoose";
-import counterRoutes from "./routes/counterRoutes";
 import cors from "cors";
 const MONGOURI = "mongodb+srv://opeled6:Omerpeled1@cluster0.8v7wgmo.mongodb.net/";
 const app = express();
@@ -16,7 +15,6 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
-app.use("/counter", counterRoutes);
 mongoose
     .connect(MONGOURI, { dbName: "demo_db" })
     .then(() => {
