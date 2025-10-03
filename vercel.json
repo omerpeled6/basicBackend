@@ -1,8 +1,14 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/api/index" },
-    { "source": "/test", "destination": "/api/index" },
-    { "source": "/counter", "destination": "/api/index" },
-    { "source": "/counter/update", "destination": "/api/index" }
+  "builds": [
+    {
+      "src": "server.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.ts"
+    }
   ]
 }
