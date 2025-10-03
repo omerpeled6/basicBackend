@@ -18,23 +18,16 @@ app.get("/test", (req: Request, res: Response) => {
   res.json({ message: "Hello World3" });
 });
 
-const PORT: number = 3000;
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
+// Register counter routes
 app.use("/counter", counterRoutes);
 
 // Connect to MongoDB
 mongoose
   .connect(MONGOURI, { dbName: "demo_db" })
   .then(() => {
-    app.listen(process.env.PORT || 3000, () => {
-      console.log(
-        "Connected to db & listening on port",
-        process.env.PORT || 3000
-      );
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log("Connected to db & listening on port", PORT);
     });
   })
   .catch((error) => {
