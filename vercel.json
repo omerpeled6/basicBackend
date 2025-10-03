@@ -3,10 +3,7 @@
   "builds": [
     {
       "src": "server.ts",
-      "use": "@vercel/node@3.0.0",
-      "config": {
-        "nodeVersion": "18.x"
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
